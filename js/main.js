@@ -2,6 +2,18 @@ function getMyEle(id){
     return document.querySelector(id);
 }
 
+getMyEle('#btnTimSoNDuong').onclick = function() {
+    var tong = 1;
+    for (var i = 2; i < 10000; i++) {
+       tong+= i
+       if(tong > 10000){
+        getMyEle('#txtThongBaoSoND').innerHTML = tong
+        break;
+       }
+        
+    }
+}
+
 getMyEle('#btnTinhTong').onclick = function(){
     var x = Number(getMyEle('#soX').value);
     var n = Number(getMyEle('#soN').value);
